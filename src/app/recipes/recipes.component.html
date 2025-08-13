@@ -1,0 +1,60 @@
+<section class="py-10 px-5 md:px-10">
+    <section class="flex flex-col items-center">
+      <div class="menu items-center  relative w-full">
+        <details class=" md:absolute  right-0 top-0 dropdown">
+        <summary  class="btn m-1 ring-2 ring-gray-400">{{actualCategory.toUpperCase()}}</summary>
+          <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li [ngClass]="{'hidden': actualCategory === 'all categories' }" class="category-background py-2" (click)="getCategory('all categories')"><a>ALL CATEGORIES</a></li>
+            <li [ngClass]="{'hidden': actualCategory === 'featured recipes' }" class="category-background py-2" (click)="getCategory('featured recipes')"><a>Featured Recipes</a></li>
+            <li [ngClass]="{'hidden': actualCategory === 'latest articles' }" class="category-background py-2" (click)="getCategory('latest articles')"><a>Latest Articles</a></li>
+              <li [ngClass]="{'hidden': actualCategory === 'restaurant reviews' }" class="category-background py-2" (click)="getCategory('restaurant reviews')"><a>Restaurant Reviews</a></li>
+              <li [ngClass]="{'hidden': actualCategory === 'seasonal favorites' }" class="category-background py-2" (click)="getCategory('seasonal favorites')"><a>Seasonal Favorites</a></li>
+          </ul>
+        </details>
+    </div>
+    <div class="flex flex-col items-center">
+      <h2 class="text-4xl pt-10">Seasonal Delights</h2>
+      <p class="text-center text-lg  py-10">Savor the flavors of the season with our curated recipes</p>
+    </div>
+    <div class=" w-full grid grid-cols-2 md:grid-cols-3 gap-4 py-10">
+        <app-food-article *ngFor="let foodArticle of filteredFoods"
+        [foodArticle]="foodArticle">
+        </app-food-article>
+    </div>
+    <button class="bg-yellow-500 py-2 md:py-3 md:my-5
+            text-black text-lg
+            md:text-xl font-bold w-32 md:w-48
+            rounded-md md:rounded shadow-lg">
+            More Posts
+    </button>
+    </section>
+
+    <section>
+        <div class="team py-20 flex flex-col  items-center">
+          <h2 class="text-3xl md:text-4xl font-semibold pb-5">Community Creations</h2>
+          <p class="pb-10">
+            Discover delicious recipes from our
+            talented readers and inspire your own cooking adventures.
+          </p>
+
+          <section class="flex flex-col md:flex-row items-center md:px-5 ">
+            <div *ngFor="let content of contents"
+                  class="flex flex-col items-center py-10 md:px-5">
+              <img class="w-full h-64 object-cover" [src]="content.img" alt="image 1">
+              <h2 class="text-lg md:text-xl font-bold py-2">{{content.name}}</h2>
+              <p class="font-light md:text-lg text-center">
+                {{content.description}}
+              </p>
+              <button
+                class="bg-yellow-500 py-2 md:py-3 md:my-5
+                text-black text-lg
+                md:text-xl font-bold w-32 md:w-48
+                rounded-md md:rounded shadow-lg">
+                {{content.btn}}
+              </button>
+            </div>
+          </section>
+
+        </div>
+    </section>
+</section>

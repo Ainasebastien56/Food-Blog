@@ -1,0 +1,96 @@
+<section class="font-sans">
+  <div class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/assets/backgroundImage.jpg')] bg-cover bg-center h-full text-white w-full py-20  px-5 flex flex-col justify-center items-center" >
+    <h2 class="text-2xl md:text-4xl font-bold text-center">Welcome to the World of Food Blog</h2>
+    <p class="text-center text-lg md:text-2xl py-10">
+      Your ultimate destination for exploring
+      culinary delights and discovering new
+      recipes. Join us on a flavorful journey.
+    </p>
+      <button class="bg-yellow-500 py-2 md:py-4 text-black
+        text-lg md:text-xl font-bold w-48
+        md:w-64 rounded-md md:rounded shadow-lg">
+        Contact Us
+      </button>
+  </div>
+<!--Culinary Adventure Section-->
+  <div class="px-5 md:px-10 py-20">
+    <swiper-container
+        navigation="true"
+        >
+      <swiper-slide *ngFor="let slide of contentsSlide"
+          class="flex flex-col md:flex-row-reverse md:justify-between items-center  w-full">
+        <img class="w-full md:w-1/2" [src]="slide.img" alt="image">
+        <div class="flex flex-col items-center w-full md:w-1/2">
+          <h2 class="text-4xl py-5 font-semibold">{{slide.title}}</h2>
+          <p class="pb-5 md:text-xl text-center font-light">
+            {{slide.paragraph}}
+          </p>
+          <button class="bg-yellow-500 py-2 md:py-4 md:my-5
+            text-black text-lg
+            md:text-xl font-bold w-48 md:w-64
+            rounded-md md:rounded shadow-lg">
+            {{slide.btn}}
+          </button>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+<!--Articles-->
+  <section class=" flex flex-col items-center px-5 md:px-10 pb-20" >
+
+<!--Menu Cetgories-->
+    <div class="menu items-center relative w-full py-10">
+        <details class=" md:absolute right-0 top-0 dropdown">
+        <summary class="btn m-1 ring-2 ring-gray-400">{{actualCategory.toUpperCase()}}</summary>
+        <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+          <li [ngClass]="{'hidden': actualCategory === 'all categories' }" class="category-background py-2" (click)="getCategory('all categories')"><a>ALL CATEGORIES</a></li>
+          <li [ngClass]="{'hidden': actualCategory === 'featured recipes' }" class="category-background py-2" (click)="getCategory('featured recipes')"><a>Featured Recipes</a></li>
+           <li [ngClass]="{'hidden': actualCategory === 'latest articles' }" class="category-background py-2" (click)="getCategory('latest articles')"><a>Latest Articles</a></li>
+            <li [ngClass]="{'hidden': actualCategory === 'restaurant reviews' }" class="category-background py-2" (click)="getCategory('restaurant reviews')"><a>Restaurant Reviews</a></li>
+             <li [ngClass]="{'hidden': actualCategory === 'seasonal favorites' }" class="category-background py-2" (click)="getCategory('seasonal favorites')"><a>Seasonal Favorites</a></li>
+        </ul>
+      </details>
+    </div>
+
+      <div class="flex flex-col text-center">
+        <h2 class="text-4xl py-5 font-semibold">{{actualCategory.toLocaleUpperCase()}}</h2>
+        <p class="pb-5 md:text-xl text-center font-light">
+          Explore our selection of top-rated recipes that
+          have delighted our community. Each dish is designed
+          to inspire and satisfy your culinary cravings
+        </p>
+    </div>
+
+    <div class=" w-full grid grid-cols-2 md:grid-cols-3 gap-4 py-10">
+        <app-food-article *ngFor="let foodArticle of filteredFoods"
+        [foodArticle]="foodArticle">
+        </app-food-article>
+    </div>
+    <button class="bg-yellow-500 py-2 md:py-3 md:my-5
+            text-black text-lg
+            md:text-xl font-bold w-32 md:w-48
+            rounded-md md:rounded shadow-lg">
+            More Posts
+    </button>
+
+  </section>
+
+<!--Newsletter-->
+  <section class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/assets/chef-cuisinier.jpg')] bg-cover bg-center flex flex-col items-center w-full px-5 md:px-10 py-20 text-white ">
+      <div class="flex flex-col items-center">
+        <h2 class="text-4xl py-5 font-semibold">Join Our Newsletter</h2>
+        <p class="pb-5 text-lg md:text-xl text-center font-light">
+          Subscribe for exclusive recipes, cooking tips,
+          and the latest updates from Food Blog. Join
+          our community of food enthusiasts!
+        </p>
+      </div>
+
+      <form class="w-full flex flex-col md:flex-row items-center md:justify-center text-lg">
+        <input class="bg-white w-full md:w-64 p-3 mb-2 md:mr-4 md:mb-0 rounded" type="text" placeholder="Name">
+        <input  class="bg-white w-full md:w-64 p-3 mb-2 md:mr-4 md:mb-0 rounded" type="text" placeholder="Email">
+        <button class="bg-yellow-500 w-full md:w-32 p-3 text-black rounded font-bold ">Submit</button>
+      </form>
+  </section>
+</section>

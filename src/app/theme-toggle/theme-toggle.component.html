@@ -1,0 +1,9 @@
+<label class="flex items-center gap-2 cursor-pointer">
+  <input
+    type="checkbox"
+    class="toggle theme-controller text-lg"
+    [checked]="currentTheme === 'dark'"
+    (change)="toggleTheme($event)"
+  />
+  <span>{{ currentTheme }}</span>
+</label>

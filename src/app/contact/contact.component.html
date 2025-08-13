@@ -1,0 +1,76 @@
+<section class="pb-20">
+
+  <section class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/assets/background-contact.jpg')]
+       w-full px-5 md:px-10 bg-cover bg-center h-auto
+      ">
+     <div class="flex flex-col  items-center  justify-center text-center py-20 text-white">
+          <h1 class="text-4xl pt-10">Connect With Us Online</h1>
+          <p class="text-center text-lg md:text-2xl py-10">
+            Stay update with the latest recipes, tips, and
+            cooking inspiration by following us on our
+            social media channels. Join our community of
+            food enthusiasted.
+          </p>
+
+          <button class="bg-yellow-500
+            py-2 md:py-4 text-black
+            text-xl font-semibold w-full
+            md:w-64 rounded-md md:rounded shadow-lg"
+            type="button">
+            Follow Us
+          </button>
+     </div>
+  </section>
+
+  <section class="w-full px-5 md:px-10 flex flex-col justify-center pt-20">
+      <h1 class="text-4xl text-center">Frequently Asked Questions</h1>
+          <p class="text-center text-lg py-10">
+            Find answers to common queries about our
+            blog, including recipe details, ingredient
+            substitution, and more.
+          </p>
+
+        <div class="flex flex-col items-center w-full" *ngFor="let item of faqs; let i = index">
+          <!-- Question -->
+          <button
+            (click)="toggle(i)"
+            class="w-full category-background
+             m-5  py-5 text-lg text-black flex justify-between ">
+            <span class="">{{ item.question }}</span>
+            <span class="font-bold">{{ openedIndex === i ? '−' : '+' }}</span>
+          </button>
+
+          <!-- Answer -->
+          <div *ngIf="openedIndex === i" class="w-full p-2">
+            {{ item.answer }}
+          </div>
+        </div>
+  </section>
+
+  <section class="px-5 md:px-10 flex flex-col items-center pt-20">
+    <h1 class="text-4xl pt-10">Get in Touch</h1>
+    <p class="text-center text-lg  py-10">
+      We value your feedback and inquiries.
+       Please use the form below to reach out to us with any questions,
+        suggestions, or comments you may have.
+      </p>
+
+      <form class=" flex flex-col items-center w-full">
+        <input class=" border-2 border-solid border-gray-400  pl-3 py-5 w-full md:w-2/5" type="text" placeholder="Name">
+        <input class=" border-2 border-solid border-gray-400 pl-3 py-5 my-3 w-full md:w-2/5" type="text" placeholder="Name">
+
+        <textarea
+            rows="8"
+            placeholder="Message"
+            class="border-2 border-solid border-gray-400  pl-3 w-full md:w-2/5 rounded-md  shadow-sm"></textarea>
+
+         <button type="button"
+            class="bg-yellow-500 text-xl font-semibold w-full
+            w-full md:w-32 rounded  shadow-lg text-black mt-3 py-2 md:py-4">
+          Submit
+        </button>
+      </form>
+
+  </section>
+
+</section>

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'food-blog';
+  isMenuOpen = false;
+  activeRoute: string = 'home'
+
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleRoute(route:string){
+    this.activeRoute = route
+  }
 }

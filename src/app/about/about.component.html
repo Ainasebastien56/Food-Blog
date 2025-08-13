@@ -1,0 +1,80 @@
+<section class="px-5 md:px-10 py-10 font-sans">
+  <div class="presentation w-full flex flex-col  items-center">
+
+    <div class=" flex flex-col md:flex-row justify-between">
+      <img class="w-full md:w-2/3 h-64 md:h-96 object-cover md:mr-10" src="/assets/beginning.jpg" alt="image 1">
+      <div class="md:w-1/3 bg-green-1">
+          <h2 class="text-2xl md:text-3xl font-semibold py-5">The Beginning</h2>
+          <p class="font-light md:text-lg">
+            Food Blog was born out of a shared passion for
+            culinary arts and technology, aiming to connect food
+            enthusiasts with innovative recipes and techniques.
+
+          </p>
+      </div>
+
+    </div>
+
+    <div class=" w-full  flex flex-col md:flex-row py-10">
+      <img class="w-full md:w-2/3 h-64 md:h-96 object-cover md:mr-10 " src="/assets/creativity.jpg" alt="image 1">
+
+      <div  class="md:w-1/3 bg-green-1">
+        <h2 class="text-2xl md:text-3xl font-semibold py-5">Our Mission</h2>
+        <p class="font-light md:text-lg">
+          We strive to inspire creativity in the kitchen,
+          providing a platform whre everyone can explore, learn, and enjoy
+          the art of cooking
+        </p>
+      </div>
+
+    </div>
+
+    <div class=" flex flex-col md:flex-row ">
+      <img class="w-full md:w-2/3 h-64 md:h-96  object-cover md:mr-10" src="/assets/vision.jpg" alt="image 1">
+
+      <div class="md:w-1/3 bg-green-1">
+          <h2 class="text-2xl md:text-3xl font-semibold py-5">Our Vision</h2>
+          <p class="font-light md:text-lg">
+          To become a leading resource for food lovers
+          wordwiide, fostering a community that celebrates
+          diverse culinary traditions and promotes healthy
+          eating
+          </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="team py-20 flex flex-col  items-center">
+    <h2 class="text-3xl md:text-4xl font-semibold pb-5">Our Team</h2>
+    <p class="pb-10">Meet Our Culinary Experts</p>
+
+    <section class="flex flex-col md:flex-row items-center md:px-5 ">
+      <div *ngFor="let content of contents"
+             class="flex flex-col items-center py-10 md:px-5">
+        <img class="w-full h-64 object-cover" [src]="content.img" alt="image 1">
+        <h2 class="text-lg md:text-xl font-bold py-2">{{content.name}}</h2>
+        <p class="font-light md:text-lg text-center">
+          {{content.description}}
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="principles flex flex-col items-center">
+        <h2 class="text-3xl md:text-4xl font-semibold pb-5">Our Principles</h2>
+        <p class="pb-10">What We Stand For</p>
+
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+          <div
+            *ngFor="let principle of principles"
+             class="pb-10 md:pb-20 ">
+            <h5 class="pb-3 text-lg md:text-xl">{{principle.title}}</h5>
+            <p class="font-light">
+              {{principle.paragraph}}
+            </p>
+          </div>
+        </div>
+  </div>
+</section>
