@@ -53,7 +53,7 @@
       'py-20':isMenuOpen
     }">
     <ul class="flex flex-col space-y-4">
-          <li [ngClass]="{'underline':activeRoute === 'home'}"
+          <li [ngClass]="{'underline':activeRoute ==='home'}"
               class="underline-offset-4"
               (click)="toggleRoute('home'); toggleMenu()">
               <a routerLink="home">Home</a>

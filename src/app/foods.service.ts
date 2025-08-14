@@ -5,7 +5,7 @@ import { Foods } from './foods';
   providedIn: 'root'
 })
 export class FoodsService {
-  url = 'http://localhost:3000/foods';
+  url = 'https://blog-backend-beta-eight.vercel.app/api/foods';
 
   constructor() { }
 

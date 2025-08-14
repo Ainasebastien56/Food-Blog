@@ -14,7 +14,7 @@ export class HomeComponent {
   actualCategory: string = 'all categories'
   contentsSlide =[
     {
-      img:'/assets/image_1.jpg',
+      img:'assets/image_1.jpg',
       title:'Culinary Adventures',
       paragraph:`Dive into our curated collection of recipes
             that celebrate diverse cuisines from around
@@ -23,7 +23,7 @@ export class HomeComponent {
       btn:'Discover More'
     },
     {
-      img:'/assets/image photographe.jpg',
+      img:'assets/image photographe.jpg',
       title:'Food Photography',
       paragraph:`  Explore the art of food photography with our guides designed to help you capture
             stunning images of your dishes. Transform your food
@@ -31,7 +31,7 @@ export class HomeComponent {
       btn:' See Tips'
     },
     {
-      img:'/assets/chef.jpg',
+      img:'assets/chef.jpg',
       title:'Expert Tips',
       paragraph:` Learn from our top chefs as they share best-kept secrets in the kitchen.
             From cooking techniques to ingredient substitutions,

@@ -16,6 +16,7 @@
             "outputPath": "dist/food-blog",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "/Food-Blog/",
             "polyfills": [
               "zone.js"
             ],

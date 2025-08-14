@@ -15,7 +15,7 @@ foods: Foods[] = [];
 
     contents=[
     {
-      img:'/assets/pie.jpg',
+      img:'assets/pie.jpg',
       name:"Grandma's Secret Pie",
       description:`This beloved recipe has been passed down through generations,
            featuring a flaky crust and a rich filling that brings back fond memories.
@@ -23,7 +23,7 @@ foods: Foods[] = [];
       btn:'View Recipe'
     },
      {
-      img:'/assets/vegan-tacos.jpg',
+      img:'assets/vegan-tacos.jpg',
       name:'Spicy Vegan Tacos',
       description:`
       A vibrant and flavorful dish that showcases a mix of spices
@@ -32,7 +32,7 @@ foods: Foods[] = [];
       btn:'Read More'
     },
      {
-      img:'/assets/cookies.jpg',
+      img:'assets/cookies.jpg',
       name:'Chocolate Chip Cookies',
       description:` These classic cookies are soft, chewy, and packed
                     with chocolate chips, making them a perfect treat for any occasion.

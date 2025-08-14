@@ -9,21 +9,21 @@ export class AboutComponent {
 
   contents=[
     {
-      img:'/assets/JaneDoe.jpg',
+      img:'assets/JaneDoe.jpg',
       name:'Jane Doe',
       description:`A professional chef with over a decade of experience
           in fine dining. Jane brings a wealth of knowledge and
           creativity to our recipes.`
     },
      {
-      img:'/assets/healthy.jpg',
+      img:'assets/healthy.jpg',
       name:'Emily Jhonson',
       description:` With a background in nutrition, Emily focuses on creating
           healthy, balanced meals that cater to various dietary
           needs while being delicious.`
     },
      {
-      img:'/assets/food-blogger.jpg',
+      img:'assets/food-blogger.jpg',
       name:'Jhon Smith',
       description:` A avid food blogger and photographer. Jhon captures
           the essence of food through his lens,
