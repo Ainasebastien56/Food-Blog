@@ -14,7 +14,7 @@
     </div>
     <div class="flex flex-col items-center">
       <h2 class="text-4xl pt-10">Seasonal Delights</h2>
-      <p class="text-center text-lg  py-10">Savor the flavors of the season with our curated recipes</p>
+      <p class="text-center md:text-lg  py-10">Savor the flavors of the season with our curated recipes</p>
     </div>
     <div class=" w-full grid grid-cols-2 md:grid-cols-3 gap-4 py-10">
         <app-food-article *ngFor="let foodArticle of filteredFoods"
@@ -32,7 +32,7 @@
     <section>
         <div class="team py-20 flex flex-col  items-center">
           <h2 class="text-3xl md:text-4xl font-semibold pb-5">Community Creations</h2>
-          <p class="pb-10">
+          <p class="pb-10 md:text-lg text-center">
             Discover delicious recipes from our
             talented readers and inspire your own cooking adventures.
           </p>
@@ -46,7 +46,7 @@
                 {{content.description}}
               </p>
               <button
-                class="bg-yellow-500 py-2 md:py-3 md:my-5
+                class="bg-yellow-500 py-2 md:py-3 my-3 md:my-5
                 text-black text-lg
                 md:text-xl font-bold w-32 md:w-48
                 rounded-md md:rounded shadow-lg">
